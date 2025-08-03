@@ -1,13 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { ThemeContext } from "@/contexts/ThemeContexts";
-import { useContext } from "react";
+import React from "react";
 
 const HomePage = () => {
-  const { darkMode, setDarkMode } = useContext(ThemeContext);
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen ">
-      <Button onClick={() => setDarkMode(!darkMode)}>Mode</Button>
+    <div className="flex items-center justify-center h-screen">
+      <h1 className="text-4xl font-bold">This is Home Page</h1>
     </div>
   );
 };
