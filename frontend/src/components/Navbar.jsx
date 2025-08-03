@@ -167,7 +167,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Social Icons */}
-        <div className="absolute bottom-0 right-0 flex justify-center space-x-4 pt-4 pb-6 bg-white dark:bg-slate-900 w-full">
+        <div className="flex justify-center space-x-4 pt-4 pb-6 bg-white dark:bg-slate-900 w-full">
           <a
             target="_blank"
             href="https://www.facebook.com/md.rohanul.haque.rohan"
