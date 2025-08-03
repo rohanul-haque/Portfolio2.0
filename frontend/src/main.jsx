@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App.jsx";
 import { AppContextsProvider } from "./contexts/AppContexts";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeContextProvider } from "./contexts/ThemeContexts";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <AppContextsProvider>
-      <App />
+      <ThemeContextProvider>
+        <App />
+      </ThemeContextProvider>
     </AppContextsProvider>
   </BrowserRouter>
 );
