@@ -1,12 +1,22 @@
+import { Route, Routes } from "react-router-dom";
 import { Button } from "./components/ui/button";
 import { AppLayout } from "./layout/AppLayout";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ServicePage from "./pages/ServicePage";
+import BlogPage from "./pages/BlogPage";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   return (
     <AppLayout>
-      <div className="flex h-screen items-center justify-center">
-        <Button variant={"outline"}>Click</Button>
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/service" element={<ServicePage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </AppLayout>
   );
 };
