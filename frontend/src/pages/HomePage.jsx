@@ -1,8 +1,14 @@
+import Counter from "@/components/Counter";
 import Hero from "@/components/Hero";
 import React from "react";
 
 const HomePage = () => {
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <Counter />
+    </>
+  );
 };
 
 export default HomePage;
