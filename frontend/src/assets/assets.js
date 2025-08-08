@@ -1,7 +1,9 @@
 import logo from "./Logoi.jpg";
+import hero from "./hero.jpg";
 
 export const assets = {
   logo,
+  hero,
 };
 
 export const navlinks = [
