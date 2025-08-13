@@ -12,7 +12,7 @@ const Hero = () => {
         {/* Text Content */}
         <div className="text-center lg:text-left lg:w-1/2">
           <span className="text-xl mb-2 font-bold block">
-            👋 Hi! I'm Rohanul Haque
+            👋 Hi! I'm Rohanul Haque 🚀
           </span>
 
           <TypeAnimation
@@ -33,8 +33,8 @@ const Hero = () => {
             repeat={Infinity}
           />
           <p className="mt-4 md:text-lg">
-            I break down complex user experience problems to create
-            integrity-focused solutions that connect billions of people.
+            I break down complex user experience problems 🧩 to create
+            integrity-focused solutions 🛡️ that connect billions of people 🌍🤝.
           </p>
           <div className="mt-8 flex items-center gap-2 justify-center lg:justify-start">
             <Button

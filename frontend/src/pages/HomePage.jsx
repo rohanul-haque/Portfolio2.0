@@ -1,12 +1,13 @@
 import Counter from "@/components/Counter";
 import Hero from "@/components/Hero";
-import React from "react";
+import AboutPage from "./AboutPage";
 
 const HomePage = () => {
   return (
     <>
       <Hero />
       <Counter />
+      <AboutPage />
     </>
   );
 };

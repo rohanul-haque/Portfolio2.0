@@ -11,7 +11,7 @@ export const AppLayout = ({ children }) => {
         />
         <div className="relative">
           <div className="relative z-40">{children}</div>
-          <FireworksBackground className="h-screen absolute inset-0 rounded-xl" />
+          <FireworksBackground className="h-screen fixed inset-0 rounded-xl" />
         </div>
       </div>
     </main>

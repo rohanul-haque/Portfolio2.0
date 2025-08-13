@@ -11,10 +11,10 @@ const Counter = () => {
               <CountUp
                 start={0}
                 end={counter.counterNumber}
-                duration={2.75}
-                suffix="+"
+                duration={3}
                 enableScrollSpy={true}
                 scrollSpyOnce={true}
+                suffix="+"
                 className="text-4xl text-blue-500 font-bold mb-2"
               />
               <h1 className="text-base md:text-lg text-gray-700 dark:text-gray-100">
