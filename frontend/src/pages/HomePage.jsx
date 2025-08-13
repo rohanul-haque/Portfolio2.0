@@ -1,6 +1,8 @@
 import Counter from "@/components/Counter";
 import EducationAndQualification from "@/components/EducationAndQualification";
 import Hero from "@/components/Hero";
+import MyServices from "@/components/MyServices";
+import { MyTeam } from "@/components/MyTeam";
 import Skills from "@/components/Skills";
 import AboutPage from "./AboutPage";
 
@@ -12,6 +14,8 @@ const HomePage = () => {
       <AboutPage />
       <Skills />
       <EducationAndQualification />
+      <MyServices />
+      <MyTeam />
     </>
   );
 };

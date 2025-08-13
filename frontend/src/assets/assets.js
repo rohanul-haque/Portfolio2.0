@@ -1,8 +1,7 @@
-
-
 import logo from "./Logoi.jpg";
 import about_1 from "./about.jpg";
 import about_2 from "./about_2.png";
+import card_1 from "./card_1.png";
 import hero from "./hero.jpg";
 
 export const assets = {
@@ -10,6 +9,7 @@ export const assets = {
   hero,
   about_1,
   about_2,
+  card_1,
 };
 
 export const navlinks = [

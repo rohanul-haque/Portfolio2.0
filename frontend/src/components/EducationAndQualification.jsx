@@ -17,7 +17,7 @@ const EducationAndQualification = () => {
       institution: "Example High School",
       year: "2016 - 2021",
       description:
-        "Completed high school with a focus on mathematics and science.",
+        "Completed high school with a focus on mathematics, English and science.",
       icon: <FaSchool className="text-blue-500 text-2xl" />,
     },
     {
@@ -45,7 +45,7 @@ const EducationAndQualification = () => {
         {education.map((edu) => (
           <div key={edu.id} className="relative pl-12">
             {/* Timeline Dot */}
-            <div className="absolute left-3 top-6 h-4 w-4 bg-blue-500 rounded-full"></div>
+            <div className="absolute left-3 top-0 h-4 w-4 bg-blue-500 rounded-full"></div>
 
             {/* Education Card */}
             <div className="p-6 rounded-lg border border-gray-300 dark:border-gray-700 backdrop-blur-sm">
