@@ -1,50 +1,7 @@
-import { assets } from "@/assets/assets";
+import { teamMembers } from "@/assets/assets";
 import { Facebook, Github, Linkedin } from "lucide-react";
 
 export const MyTeam = () => {
-  const teamMembers = [
-    {
-      name: "MD ROHANUL HAQUE",
-      role: "Full Stack Developer",
-      img: assets.card_1,
-      socials: {
-        facebook: "#",
-        github: "#",
-        linkedin: "#",
-      },
-    },
-    {
-      name: "Jane Doe",
-      role: "UI/UX Designer",
-      img: assets.card_1,
-      socials: {
-        facebook: "#",
-        github: "#",
-        linkedin: "#",
-      },
-    },
-    {
-      name: "John Smith",
-      role: "Backend Engineer",
-      img: assets.card_1,
-      socials: {
-        facebook: "#",
-        github: "#",
-        linkedin: "#",
-      },
-    },
-    {
-      name: "Emily Davis",
-      role: "Frontend Developer",
-      img: assets.card_1,
-      socials: {
-        facebook: "#",
-        github: "#",
-        linkedin: "#",
-      },
-    },
-  ];
-
   return (
     <section className="px-4 sm:px-8 lg:px-16 mt-20 pb-10">
       {/* Section Title */}
@@ -65,7 +22,7 @@ export const MyTeam = () => {
               alt={member.name}
             />
             {/* Name + Role */}
-            <h1 className="text-lg font-semibold">{member.name}</h1>
+            <h1 className="text-lg font-semibold uppercase">{member.name}.</h1>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
               {member.role}
             </p>
