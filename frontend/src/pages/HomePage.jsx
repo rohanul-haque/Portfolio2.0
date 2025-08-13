@@ -1,5 +1,6 @@
 import Counter from "@/components/Counter";
 import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
 import AboutPage from "./AboutPage";
 
 const HomePage = () => {
@@ -8,6 +9,7 @@ const HomePage = () => {
       <Hero />
       <Counter />
       <AboutPage />
+      <Skills />
     </>
   );
 };
