@@ -66,7 +66,7 @@ const Navbar = () => {
         </ul>
 
         {/* Icons */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center gap-2">
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="p-2.5 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition cursor-pointer"
