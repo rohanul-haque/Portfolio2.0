@@ -5,6 +5,7 @@ import MyServices from "@/components/MyServices";
 import { MyTeam } from "@/components/MyTeam";
 import Skills from "@/components/Skills";
 import AboutPage from "./AboutPage";
+import MyProject from "@/components/MyProject";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <EducationAndQualification />
       <MyServices />
       <MyTeam />
+      <MyProject />
     </>
   );
 };

@@ -3,7 +3,7 @@ import { Facebook, Github, Linkedin } from "lucide-react";
 
 export const MyTeam = () => {
   return (
-    <section className="px-4 sm:px-8 lg:px-16 mt-20 pb-10">
+    <section className="px-4 sm:px-8 lg:px-16 mt-20">
       {/* Section Title */}
       <h2 className="text-4xl font-bold  mb-2 text-center">My Teams</h2>
       <span className="block h-1 w-24 bg-blue-600  dark:bg-white rounded-full mx-auto mb-8"></span>
