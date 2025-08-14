@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import AboutPage from "./AboutPage";
 import BlogPage from "./BlogPage";
 import ContactPage from "./ContactPage";
+import FooterPage from "./FooterPage";
 
 const HomePage = () => {
   return (
@@ -23,6 +24,7 @@ const HomePage = () => {
       <BlogPage />
       <div className="block mb-20"></div>
       <ContactPage />
+      <FooterPage />
     </>
   );
 };
