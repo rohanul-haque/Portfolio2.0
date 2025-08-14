@@ -7,6 +7,7 @@ import ServicePage from "./pages/ServicePage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import Navbar from "./components/Navbar";
+import ViewBlogPage from "./pages/ViewBlogPage";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/service" element={<ServicePage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:id" element={<ViewBlogPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </AppLayout>

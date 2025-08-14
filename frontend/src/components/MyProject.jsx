@@ -49,11 +49,11 @@ const projectsData = [
 
 const filters = [
   "All",
-  "Web Development",
-  "Mobile Apps",
-  "Design",
-  "React",
-  "React Native",
+  "Html & Css",
+  "Javascript",
+  "Full Stack",
+  "Frontend",
+  "Backend",
 ];
 
 export default function MyProject() {
@@ -65,7 +65,7 @@ export default function MyProject() {
       : projectsData.filter((project) => project.tags.includes(activeFilter));
 
   return (
-    <section className="px-4 sm:px-8 lg:px-16 mt-20">
+    <section className="px-4 sm:px-8 lg:px-16 mt-20 mb-10">
       <h1 className="text-4xl font-bold mb-2 text-center">Project Showcase</h1>
       <span className="block h-1 w-24 bg-blue-600 dark:bg-white rounded-full mx-auto mb-8"></span>
 
@@ -75,7 +75,7 @@ export default function MyProject() {
           <button
             key={filter}
             onClick={() => setActiveFilter(filter)}
-            className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+            className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 cursor-pointer ${
               activeFilter === filter
                 ? "bg-blue-500 text-white"
                 : "bg-white text-blue-500 hover:bg-blue-100"
