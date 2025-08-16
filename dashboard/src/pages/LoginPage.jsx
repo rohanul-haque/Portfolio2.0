@@ -1,4 +1,7 @@
+import axios from "axios";
 import { useState } from "react";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const UserIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +60,38 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const url = "http://localhost:8080";
+
+  const formSubmitHandler = async (e) => {
+    e.preventDefault();
+    console.log(email, password);
+
+    try {
+      const { data } = await axios.post(`${url}/user/login`, {
+        email,
+        password,
+      });
+
+      console.log(data);
+
+      if (data.success && data.token) {
+        localStorage.setItem("token", data.token);
+        toast.success(data.message);
+        navigate("/");
+      } else {
+        toast.error(data.message || "Login failed");
+      }
+    } catch (error) {
+      toast.error(error.response?.data?.message || error.message);
+    }
+  };
+
   return (
     <div className="relative w-full h-screen flex items-center justify-center font-sans overflow-hidden px-6">
-      {}
       <div className="relative w-full max-w-sm p-6 space-y-6 bg-white dark:bg-black rounded-lg border border-zinc-200 dark:border-zinc-800 shadow-lg dark:shadow-zinc-900/50">
-        {}
         <div className="text-center space-y-3">
           <div className="inline-flex p-2 bg-zinc-100 dark:bg-zinc-900 rounded-md border border-zinc-200 dark:border-zinc-800">
             <UserIcon />
@@ -75,8 +105,7 @@ export default function LoginPage() {
             </p>
           </div>
         </div>
-
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={formSubmitHandler}>
           <div className="space-y-2">
             <label
               htmlFor="email"
