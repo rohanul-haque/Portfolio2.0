@@ -1,5 +1,6 @@
+import { AppContext } from "@/contexts/AppContext";
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 const UserIcon = () => (
@@ -61,26 +62,24 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigate = useNavigate();
+  const { backendUrl } = useContext(AppContext);
 
-  const url = "http://localhost:8080";
+  const navigate = useNavigate();
 
   const formSubmitHandler = async (e) => {
     e.preventDefault();
     console.log(email, password);
 
     try {
-      const { data } = await axios.post(`${url}/user/login`, {
+      const { data } = await axios.post(`${backendUrl}/user/login`, {
         email,
         password,
       });
 
-      console.log(data);
-
       if (data.success && data.token) {
         localStorage.setItem("token", data.token);
         toast.success(data.message);
-        navigate("/");
+        navigate("/add-project");
       } else {
         toast.error(data.message || "Login failed");
       }
