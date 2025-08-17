@@ -7,8 +7,6 @@ import { Button } from "./ui/button";
 const Navbar = () => {
   const { adminData } = useContext(AppContext);
 
-  console.log(adminData);
-
   return (
     <header className="pt-5 pb-3 border-b border-gray-200">
       <nav className="flex items-center justify-between">

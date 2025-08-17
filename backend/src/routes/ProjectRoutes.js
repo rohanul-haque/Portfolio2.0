@@ -11,7 +11,7 @@ import Uplods from "../utils/Uplods.js";
 const router = express.Router();
 
 router.post("/add", AuthMiddleware, Uplods.single("image"), addProject);
-router.post("/delete", AuthMiddleware, deleteProject);
+router.delete("/delete", AuthMiddleware, deleteProject);
 router.get("/list", AuthMiddleware, projectList);
 
 export default router;

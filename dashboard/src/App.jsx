@@ -29,11 +29,11 @@ const App = () => {
   return (
     <AppLayout>
       <Navbar />
-      <div className="flex gap-3 ">
-        <div className="w-48 border-r h-screen">
+      <div className="flex gap-3">
+        <div className="w-48 border-r h-screen hidden lg:block">
           <Sidebar />
         </div>
-        <div>
+        <div className="flex-1 pt-3">
           <Routes>
             <Route path="/add-project" element={<AddProject />} />
             <Route path="/project-list" element={<ProjectList />} />

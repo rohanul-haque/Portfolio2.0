@@ -9,10 +9,11 @@ export const addProject = async (req, res) => {
   if (
     !title ||
     !description ||
-    !tags ||
     !sourceCode ||
     !liveLink ||
-    !projectImage
+    !projectImage ||
+    !tags ||
+    (Array.isArray(tags) && tags.length === 0)
   ) {
     return res
       .status(400)
@@ -22,10 +23,17 @@ export const addProject = async (req, res) => {
   try {
     const uploadedImage = await cloudinary.uploader.upload(projectImage.path);
 
+    let formattedTags = [];
+    if (Array.isArray(tags)) {
+      formattedTags = tags.map((tag) => tag.trim());
+    } else {
+      formattedTags = tags.split(",").map((tag) => tag.trim());
+    }
+
     const project = new Project({
       title,
       description,
-      tags: tags.split(",").map((tag) => tag.trim()),
+      tags: formattedTags,
       sourceCode,
       liveLink,
       image: uploadedImage.secure_url,
@@ -39,6 +47,7 @@ export const addProject = async (req, res) => {
       project,
     });
   } catch (error) {
+    console.error("Error uploading project:", error);
     return res.status(500).json({
       success: false,
       message: "Project upload failed",

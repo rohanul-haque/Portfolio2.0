@@ -18,5 +18,5 @@ export const navlinks = [
   { id: 3, title: "Add Team Member", path: "/add-team-member" },
   { id: 4, title: "Team Member List", path: "/team-member-list" },
   { id: 5, title: "Add Blog", path: "/add-blog" },
-  { id: 5, title: "Blog List", path: "/blog-list" },
+  { id: 6, title: "Blog List", path: "/blog-list" },
 ];
