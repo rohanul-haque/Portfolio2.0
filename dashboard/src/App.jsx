@@ -7,6 +7,7 @@ import AddTeamMember from "./pages/AddTeamMember";
 import LoginPage from "./pages/LoginPage";
 import ProjectList from "./pages/ProjectList";
 import TeamMemberList from "./pages/TeamMemberList";
+import Sidebar from "./components/SIdebar";
 
 const App = () => {
   const navigate = useNavigate();
@@ -28,13 +29,20 @@ const App = () => {
   return (
     <AppLayout>
       <Navbar />
-      <Routes>
-        <Route path="/add-project" element={<AddProject />} />
-        <Route path="/project-list" element={<ProjectList />} />
-        <Route path="/add-team-member" element={<AddTeamMember />} />
-        <Route path="/team-member-list" element={<TeamMemberList />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
+      <div className="flex gap-3 ">
+        <div className="w-48 border-r h-screen">
+          <Sidebar />
+        </div>
+        <div>
+          <Routes>
+            <Route path="/add-project" element={<AddProject />} />
+            <Route path="/project-list" element={<ProjectList />} />
+            <Route path="/add-team-member" element={<AddTeamMember />} />
+            <Route path="/team-member-list" element={<TeamMemberList />} />
+            <Route path="/login" element={<LoginPage />} />
+          </Routes>
+        </div>
+      </div>
     </AppLayout>
   );
 };
