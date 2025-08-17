@@ -34,7 +34,7 @@ export const AppContextProvider = ({ children }) => {
     fetchAdminData();
   }, []);
 
-  const value = { backendUrl, adminData, setAdminData };
+  const value = { backendUrl, adminData, setAdminData, fetchAdminData };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
