@@ -12,6 +12,6 @@ const router = express.Router();
 
 router.post("/add", AuthMiddleware, Uplods.single("image"), addProject);
 router.delete("/delete", AuthMiddleware, deleteProject);
-router.get("/list", AuthMiddleware, projectList);
+router.get("/list", projectList);
 
 export default router;
