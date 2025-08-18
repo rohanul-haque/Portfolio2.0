@@ -14,11 +14,7 @@ const ProjectList = () => {
   const fetchProjectData = async () => {
     setIsLoading(true);
     try {
-      const { data } = await axios.get(`${backendUrl}/project/list`, {
-        headers: {
-          token: localStorage.getItem("token"),
-        },
-      });
+      const { data } = await axios.get(`${backendUrl}/project/list`);
 
       if (data.success) {
         setProjectList(data?.projects || []);
