@@ -127,7 +127,7 @@ export default function MyProject() {
                       />
                     )}
                     <h2 className="text-xl font-bold mb-2">
-                      {title.length > 30 ? title.slice(0, 30) + "..." : title}
+                      {title.length > 50 ? title.slice(0, 50) + "..." : title}
                     </h2>
                     <p className="mb-4">
                       {description.length > 120
