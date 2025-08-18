@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/SIdebar";
+import Sidebar from "./components/Sidebar";
 import AppLayout from "./layouts/AppLayout";
 import AddProject from "./pages/AddProject";
 import AddTeamMember from "./pages/AddTeamMember";

@@ -90,11 +90,13 @@ export default function MyProject() {
                   alt={title}
                   className="w-full aspect-video object-cover rounded-lg mb-4"
                 />
-                <h2 className="text-xl font-bold mb-2">{title}</h2>
+                <h2 className="text-xl font-bold mb-2">
+                  {title.slice(0, 50)}....
+                </h2>
                 <p className="mb-4">{description.slice(0, 120)}.....</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {tags.map((tag) => (
+                  {tags.slice(0, 4).map((tag) => (
                     <span
                       key={tag}
                       className="bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded"
@@ -102,6 +104,11 @@ export default function MyProject() {
                       {tag}
                     </span>
                   ))}
+                  {tags.length > 4 && (
+                    <span className="bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded-full">
+                      +{tags.length - 4}
+                    </span>
+                  )}
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-2">
