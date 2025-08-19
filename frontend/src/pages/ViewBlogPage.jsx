@@ -25,8 +25,6 @@ const ViewBlogPage = () => {
       if (data.success) {
         setBlogData(data.blogData);
       }
-
-      console.log(data);
     } catch (error) {
       console.log(error);
       toast.error(error.response?.data?.message || error.message);
