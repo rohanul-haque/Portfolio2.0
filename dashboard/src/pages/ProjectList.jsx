@@ -60,7 +60,7 @@ const ProjectList = () => {
   }, []);
 
   return (
-    <section className="w-full">
+    <section className="w-full mb-3">
       {isLoading ? (
         <Loader />
       ) : (

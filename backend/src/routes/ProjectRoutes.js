@@ -1,16 +1,16 @@
 import express from "express";
 
 import {
-  addProject,
-  deleteProject,
-  projectList,
+    addProject,
+    deleteProject,
+    projectList,
 } from "../controllers/AddProjectController.js";
 import AuthMiddleware from "../middlewares/AuthMiddleware.js";
-import Uplods from "../utils/Uplods.js";
+import Uploads from "../utils/Uploads.js";
 
 const router = express.Router();
 
-router.post("/add", AuthMiddleware, Uplods.single("image"), addProject);
+router.post("/add", AuthMiddleware, Uploads.single("image"), addProject);
 router.delete("/delete", AuthMiddleware, deleteProject);
 router.get("/list", projectList);
 
