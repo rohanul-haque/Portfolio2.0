@@ -15,8 +15,7 @@ export const assets = {
 export const navlinks = [
   { id: 1, title: "Add Porject", path: "/add-project" },
   { id: 2, title: "Project List", path: "/project-list" },
-  { id: 3, title: "Add Team Member", path: "/add-team-member" },
-  { id: 4, title: "Team Member List", path: "/team-member-list" },
-  { id: 5, title: "Add Blog", path: "/add-blog" },
-  { id: 6, title: "Blog List", path: "/blog-list" },
+  { id: 3, title: "Add Blog", path: "/add-blog" },
+  { id: 4, title: "Blog List", path: "/blog-list" },
+  { id: 5, title: "Message List", path: "/message-list" },
 ];

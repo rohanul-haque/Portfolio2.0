@@ -6,11 +6,10 @@ import Sidebar from "./components/Sidebar";
 import AppLayout from "./layouts/AppLayout";
 import { AddBlog } from "./pages/AddBlog";
 import AddProject from "./pages/AddProject";
-import AddTeamMember from "./pages/AddTeamMember";
 import BlogList from "./pages/BlogList";
 import LoginPage from "./pages/LoginPage";
+import MessageList from "./pages/MessageList";
 import ProjectList from "./pages/ProjectList";
-import TeamMemberList from "./pages/TeamMemberList";
 import ViewBlog from "./pages/ViewBlog";
 
 const App = () => {
@@ -49,11 +48,10 @@ const App = () => {
               <Routes>
                 <Route path="/add-project" element={<AddProject />} />
                 <Route path="/project-list" element={<ProjectList />} />
-                <Route path="/add-team-member" element={<AddTeamMember />} />
-                <Route path="/team-member-list" element={<TeamMemberList />} />
                 <Route path="/add-blog" element={<AddBlog />} />
                 <Route path="/blog-list" element={<BlogList />} />
                 <Route path="/blog/:id" element={<ViewBlog />} />
+                <Route path="/message-list" element={<MessageList />} />
               </Routes>
             </div>
           </div>

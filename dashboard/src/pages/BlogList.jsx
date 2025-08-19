@@ -60,9 +60,7 @@ const BlogList = () => {
   return (
     <section className="w-full mb-3">
       {loading ? (
-        <div className="flex justify-center items-center h-64">
-          <Loader />
-        </div>
+        <Loader />
       ) : (
         <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
           <div className="overflow-x-auto">

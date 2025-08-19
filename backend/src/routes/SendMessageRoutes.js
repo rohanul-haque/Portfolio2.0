@@ -7,6 +7,6 @@ import {
 const router = express.Router();
 
 router.post("/send", SendMessage);
-router.post("/list", messageList);
+router.get("/list", messageList);
 
 export default router;
