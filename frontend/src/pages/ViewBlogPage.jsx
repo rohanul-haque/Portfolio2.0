@@ -1,48 +1,111 @@
-import { blogPosts } from "@/assets/assets";
+import { assets } from "@/assets/assets";
+import Loader from "@/components/Loader";
+import { AppContexts } from "@/contexts/AppContexts";
+import axios from "axios";
 import { MoveLeft } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useParams } from "react-router-dom";
+import "../styles/ViewBlog.css";
 
 const ViewBlogPage = () => {
+  const [blogData, setBlogData] = useState(null);
+  const [loader, setLoader] = useState(false);
+
   const { id } = useParams();
-  const [blog, setBlog] = useState(null);
+  const { backendUrl } = useContext(AppContexts);
+
+  const findBlogById = async () => {
+    setLoader(true);
+    try {
+      const { data } = await axios.post(`${backendUrl}/blog/find`, {
+        blogId: id,
+      });
+
+      if (data.success) {
+        setBlogData(data.blogData);
+      }
+
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response?.data?.message || error.message);
+    } finally {
+      setLoader(false);
+    }
+  };
 
   useEffect(() => {
-    const foundBlog = blogPosts.find((b) => b.id === Number(id));
-    setBlog(foundBlog);
+    findBlogById();
   }, [id]);
 
-  if (!blog) {
+  if (loader) {
+    return <Loader />;
+  }
+
+  if (!blogData) {
     return (
-      <section className="px-4 sm:px-8 lg:px-16 mt-16 min-h-screen flex items-center justify-center">
-        <p className="text-lg text-gray-500">Blog post not found.</p>
-      </section>
+      <div className="flex justify-center items-center h-[60vh]">
+        <p className="text-gray-500">Blog not found.</p>
+      </div>
     );
   }
 
+  // Format Date
+  const formattedDate = new Date(blogData?.createdAt).toLocaleDateString(
+    "en-US",
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }
+  );
+
   return (
-    <section className="px-4 sm:px-8 lg:px-16 mt-20">
+    <section className="px-4 sm:px-8 lg:px-16 mt-16 min-h-screen">
       {/* Back Button */}
-      <div className="mb-5 ">
+      <div className="mb-5">
         <Link
-          to="/blogs"
-          className="dark:text-white md:text-lg font-medium hover:underline flex items-center gap-2"
+          to="/blog-list"
+          className="dark:text-white text-gray-800 md:text-lg font-medium hover:underline flex items-center gap-2"
         >
-          <MoveLeft /> Back to Blogs
+          <MoveLeft className="w-5 h-5" /> Back to Blogs
         </Link>
       </div>
+
       {/* Blog Image */}
-      <div className="rounded-2xl overflow-hidden shadow-lg">
+      <div className="rounded-2xl overflow-hidden border dark:border-gray-600">
         <img
-          src={blog.image}
-          alt={blog.title}
-          className="w-full h-64 sm:h-96 object-cover"
+          src={blogData?.image}
+          alt={blogData?.title}
+          className="w-full h-64 sm:h-96 object-cover transition-transform duration-300 hover:scale-105 rounded-md"
         />
       </div>
 
       {/* Blog Content */}
-      <h1 className="text-3xl sm:text-4xl font-bold mb-4 mt-5">{blog.title}</h1>
-      <p className="leading-loose pb-10">{blog.description}</p>
+      <div className="mt-8">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6">
+          {blogData?.title}
+        </h1>
+
+        {/* Author + Time */}
+        <div className="flex items-center gap-3 mb-6">
+          <img
+            src={assets.card_1}
+            alt={blogData?.author?.name || "Author"}
+            className="w-10 h-10 rounded-full object-cover"
+          />
+          <div>
+            <p className="font-medium">MD ROHANUL HAQUE.</p>
+            <p className="text-sm">{formattedDate}</p>
+          </div>
+        </div>
+
+        <p
+          className="leading-relaxed text-justify blog-description"
+          dangerouslySetInnerHTML={{ __html: blogData?.description }}
+        ></p>
+      </div>
     </section>
   );
 };

@@ -15,7 +15,7 @@ const FooterPage = () => {
                   `transition duration-200 ${
                     isActive
                       ? "text-blue-500"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300"
+                      : "hover:text-blue-600 dark:hover:text-blue-300"
                   }`
                 }
                 to={"/"}
@@ -29,7 +29,7 @@ const FooterPage = () => {
                   `transition duration-200 ${
                     isActive
                       ? "text-blue-500"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300"
+                      : "hover:text-blue-600 dark:hover:text-blue-300"
                   }`
                 }
                 to={"/about"}
@@ -43,7 +43,7 @@ const FooterPage = () => {
                   `transition duration-200 ${
                     isActive
                       ? "text-blue-500"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300"
+                      : "hover:text-blue-600 dark:hover:text-blue-300"
                   }`
                 }
                 to={"/services"}
@@ -57,7 +57,7 @@ const FooterPage = () => {
                   `transition duration-200 ${
                     isActive
                       ? "text-blue-500"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300"
+                      : "hover:text-blue-600 dark:hover:text-blue-300"
                   }`
                 }
                 to={"/blogs"}
@@ -71,7 +71,7 @@ const FooterPage = () => {
                   `transition duration-200 ${
                     isActive
                       ? "text-blue-500"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300"
+                      : "hover:text-blue-600 dark:hover:text-blue-300"
                   }`
                 }
                 to={"/contact"}
