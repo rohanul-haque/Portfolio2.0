@@ -66,7 +66,7 @@ const ViewBlogPage = () => {
       {/* Back Button */}
       <div className="mb-5">
         <Link
-          to="/blog-list"
+          to="/blogs"
           className="dark:text-white text-gray-800 md:text-lg font-medium hover:underline flex items-center gap-2"
         >
           <MoveLeft className="w-5 h-5" /> Back to Blogs
