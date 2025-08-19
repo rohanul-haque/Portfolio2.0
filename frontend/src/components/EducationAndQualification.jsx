@@ -1,3 +1,4 @@
+import { CircleUser } from "lucide-react";
 import { FaCertificate, FaGraduationCap, FaSchool } from "react-icons/fa";
 
 const EducationAndQualification = () => {
@@ -9,7 +10,9 @@ const EducationAndQualification = () => {
       year: "Running",
       description:
         "Currently pursuing a diploma in Computer Science & Technology with a focus on software development and data structures.",
-      icon: <FaGraduationCap className="text-blue-500 text-2xl" />,
+      icon: (
+        <FaGraduationCap className="text-blue-500 dark:text-white text-2xl" />
+      ),
     },
     {
       id: 2,
@@ -18,7 +21,7 @@ const EducationAndQualification = () => {
       year: "2016 - 2021",
       description:
         "Completed high school with a focus on mathematics, English and science.",
-      icon: <FaSchool className="text-blue-500 text-2xl" />,
+      icon: <FaSchool className="text-blue-500 dark:text-white text-2xl" />,
     },
     {
       id: 3,
@@ -27,7 +30,18 @@ const EducationAndQualification = () => {
       year: "2024 - 2025",
       description:
         "Enrolled in a comprehensive course on full-stack development, covering React, Node.js, and MongoDB.",
-      icon: <FaCertificate className="text-blue-500 text-2xl" />,
+      icon: (
+        <FaCertificate className="text-blue-500 dark:text-white text-2xl" />
+      ),
+    },
+    {
+      id: 4,
+      degree: "TPI CPC Programming Club - Executive Team Member",
+      institution: "Thakurgaon Polytechnic Institute",
+      year: "2023 - 2025",
+      description:
+        "I was an executive team member at TPI CPC Programming Club, where I learned effective teamwork, leadership, and problem-solving in coding projects. I gained hands-on experience in managing tasks, collaborating with peers, and tackling programming challenges.",
+      icon: <CircleUser className="text-blue-500 dark:text-white text-2xl" />,
     },
   ];
 
