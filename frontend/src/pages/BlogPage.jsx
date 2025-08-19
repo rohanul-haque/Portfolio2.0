@@ -107,7 +107,7 @@ const BlogPage = () => {
                   </p>
                   <Button
                     onClick={() => navigate(`/blog/${_id}`, scrollTo(0, 0))}
-                    className="bg-blue-500 text-white hover:bg-blue-600 transition-colors"
+                    className="bg-blue-500 text-white hover:bg-blue-600 transition-colors cursor-pointer"
                   >
                     Read More
                   </Button>
