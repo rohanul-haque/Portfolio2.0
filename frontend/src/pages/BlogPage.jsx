@@ -106,7 +106,7 @@ const BlogPage = () => {
                     {truncateText(description, 100).slice(0, 100)}.....
                   </p>
                   <Button
-                    onClick={() => navigate(`/blog/${_id}`)}
+                    onClick={() => navigate(`/blog/${_id}`, scrollTo(0, 0))}
                     className="bg-blue-500 text-white hover:bg-blue-600 transition-colors"
                   >
                     Read More
