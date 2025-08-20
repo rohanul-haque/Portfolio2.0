@@ -88,7 +88,7 @@ export default function MyProject() {
               <div className="flex flex-col sm:flex-row gap-2">
                 <Skeleton className="w-full sm:w-1/2 h-10 bg-gray-400 dark:bg-gray-500 rounded" />
                 <Skeleton className="w-full sm:w-1/2 h-10 bg-gray-400 dark:bg-gray-500 rounded" />
-              </div>
+              </div>     
             </div>
           ))
         ) : filteredProjects.length === 0 ? (

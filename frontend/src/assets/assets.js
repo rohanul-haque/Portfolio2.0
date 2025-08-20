@@ -1,3 +1,4 @@
+import card_2 from "./1755699731366.jpg";
 import logo from "./Logoi.jpg";
 import about_1 from "./about.jpg";
 import about_2 from "./about_2.png";
@@ -10,6 +11,7 @@ export const assets = {
   about_1,
   about_2,
   card_1,
+  card_2,
 };
 
 export const navlinks = [
@@ -27,8 +29,9 @@ export const counterData = [
 ];
 export const aboutBanner = [
   { id: 1, image: about_1 },
-  { id: 2, image: about_2 },
-  { id: 3, image: hero },
+  { id: 2, image: card_2 },
+  { id: 3, image: about_2 },
+  { id: 4, image: hero },
 ];
 
 export const skillsData = [
