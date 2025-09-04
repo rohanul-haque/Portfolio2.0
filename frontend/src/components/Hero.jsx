@@ -43,7 +43,15 @@ const Hero = () => {
             >
               Get In Touch
             </Button>
-            <Button variant={"default"}>View Resume</Button>
+            <Button variant={"default"}>
+              <a
+                href="https://docs.google.com/document/d/1TUvFqoXmxBQOo0dLlKaHJ9pwVbLPBSaychsEPVU-TKE/edit?tab=t.0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Resume
+              </a>
+            </Button>
           </div>
         </div>
 
